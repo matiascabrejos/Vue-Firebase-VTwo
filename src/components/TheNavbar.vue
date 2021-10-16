@@ -1,5 +1,7 @@
 <template>
-  
+  <router-link to=""></router-link>
+  <router-link to=""></router-link>
+  <router-link to=""></router-link>
 </template>
 
 <script>
