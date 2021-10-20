@@ -1,13 +1,11 @@
 <template>
-  <the-form></the-form>
+  <the-home></the-home>
+  <add-note></add-note>
 </template>
 
 <script>
-import TheForm from './components/TheForm.vue'
-
 
 export default {
-  components: { TheForm },
 
 }
 </script>
