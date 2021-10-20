@@ -1,12 +1,14 @@
 <template>
-  <the-login></the-login>
+  <the-form></the-form>
 </template>
 
 <script>
-import TheLogin from './components/TheLogin.vue'
+import TheForm from './components/TheForm.vue'
+
 
 export default {
-  components: TheLogin,
+  components: { TheForm },
+
 }
 </script>
 
