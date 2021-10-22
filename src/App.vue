@@ -1,6 +1,6 @@
 <template>
-  <the-home></the-home>
-  <add-note></add-note>
+ <the-navbar></the-navbar>
+ <router-view></router-view>
 </template>
 
 <script>
