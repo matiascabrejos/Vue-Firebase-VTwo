@@ -42,4 +42,11 @@ export default {
       })
       .catch(e =>console.log(e))
   },
+  logout(context) {
+    context.commit('setUser', {
+      token: null,
+      userId: null,
+      tokenExpiration: null
+    })
+  }
 }
