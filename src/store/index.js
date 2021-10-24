@@ -8,16 +8,6 @@ const store = createStore({
         auth: authModule,
         notes: notesModule
     },
-    state() {
-        return {
-            userId: 'c3'
-        }
-    },
-    getters: {
-        userId(state) {
-            return state.userId
-        }
-    }
 })
 
 export default store

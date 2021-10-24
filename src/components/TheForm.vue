@@ -9,6 +9,8 @@
         <input type="text" v-model.trim="title" class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300">
         <label for="" class="block mb-2 text-indigo-500">Description</label>
         <textarea name="" id="" cols="30" rows="8" v-model.trim="description" class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"></textarea>
+        <label for="" class="block mb-2 text-indigo-500">Image Link</label>
+        <input type="text" v-model.trim="imageLink" class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300">
         <div>
             <h3>Level Of Importance</h3>
             </div>
@@ -33,6 +35,7 @@ export default {
         return {
             title: '',
             decription: '',
+            imageLink: '',
             levelImportance: []
         }
     },
@@ -41,7 +44,8 @@ export default {
         const formData = {
           title: this.title,
           description: this.description,
-          levelImportance: this.levelImportance          
+          levelImportance: this.levelImportance,
+          imageLink: this.imageLink          
         }
         this.$emit('save-data', formData)
       }

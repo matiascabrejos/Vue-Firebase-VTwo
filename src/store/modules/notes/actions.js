@@ -4,13 +4,14 @@ export default {
         const noteData = {
             title: data.title,
             description: data.description,
-            importance: data.levelImportance
+            importance: data.levelImportance,
+            imageLink: data.imageLink
         }
 
         const token = context.rootGetters.token
 
-        const response = await fetch(`https://fir-login-e87c1-default-rtdb.firebaseio.com/notes/${userId}.json?auth=` + token, {
-            method: 'PUT',
+        const response = await fetch(`https://fir-login-e87c1-default-rtdb.firebaseio.com/notes.json?auth=` + token, {
+            method: 'POST',
             body: JSON.stringify(noteData)
         })
 
@@ -43,7 +44,8 @@ export default {
                     id: key,
                     title: responseData[key].title,
                     description: responseData[key].description,
-                    importance: responseData[key].importance
+                    importance: responseData[key].importance,
+                    imageLink: responseData[key].imageLink
                 }
                 notes.push(note)
             }

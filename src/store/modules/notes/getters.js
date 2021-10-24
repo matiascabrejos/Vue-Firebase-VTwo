@@ -3,6 +3,6 @@ export default {
         return state.notes
     },
     hasNotes(state) {
-        return state.coaches && state.coaches.length > 0
+        return state.notes && state.notes.length > 0
     },
 }
