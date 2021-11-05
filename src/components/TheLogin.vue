@@ -1,106 +1,127 @@
 <template>
-  <div class="card">
-    <form class="form-control" @submit.prevent="submitForm">
-      <label for="email">Email</label>
-      <input type="email" id="email" v-model.trim="email" />
-      <label for="password">Password</label>
-      <input type="password" id="password" v-model.trim="password" />
-      <p v-if="!formIsValid">
-        Please enter a valid email and password (at least 6 characters long).
-      </p>
-      <the-button>{{ submitButton }}</the-button>
-      <the-button type="button" mode="flat" @click="switchAuthMode">{{
-        switchModeButtonCaption
-      }}</the-button>
-    </form>
-  </div>
-
-<div class="max-w-md mx-auto bg-white shadow-xl rounded my-8">
-  <div class="bg-gray-200 pt-8 pb-16">
-    <div class="text-center text-gray-600 mb-6">Or sign in with Email & Password</div>
-    <div class="w-4/5 mx-auto">
-    <form @submit.prevent="submitForm">
-      <div class="flex items-center bg-white rounded shadow-md mb-4">
-        <span class="px-3">
-          <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z"/></svg>
-        </span>
-        <input class="w-full h-12 focus:outline-none" type="email" name="email" placeholder="Email" v-model.trim="email">
+  <div class="max-w-md mx-auto bg-white shadow-xl rounded my-8">
+    <div class="bg-gray-200 pt-8 pb-16">
+      <div class="text-center text-gray-600 mb-6">
+        Login or Sign Up
       </div>
-      <div class="flex items-center bg-white rounded shadow-md mb-4">
-        <span class="px-3">
-          <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 8V6a6 6 0 1 1 12 0h-3v2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z"/></svg>
-        </span>
-        <input class="w-full h-12 focus:outline-none" type="password" name="password" placeholder="Password" v-model.trim="password">
-      </div>   
-      <the-button class="bg-indigo-600 inline-block mx-auto text-white text-sm uppercase rounded shadow-md px-6 py-2">{{ submitButton }}</the-button>
-      <the-button type="button" mode="flat" @click="switchAuthMode" class="bg-indigo-600 inline-block mx-auto text-white text-sm uppercase rounded shadow-md px-6 py-2">{{
-        switchModeButtonCaption
-      }}</the-button>
-      </form>   
+      <div class="w-4/5 mx-auto">
+        <form @submit.prevent="submitForm">
+          <div class="flex items-center bg-white rounded shadow-md mb-4">
+            <span class="px-3">
+              <svg
+                class="fill-current text-gray-500 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z"
+                />
+              </svg>
+            </span>
+            <input
+              class="w-full h-12 focus:outline-none"
+              type="email"
+              name="email"
+              placeholder="Email"
+              v-model.trim="email"
+            />
+          </div>
+          <div class="flex items-center bg-white rounded shadow-md mb-4">
+            <span class="px-3">
+              <svg
+                class="fill-current text-gray-500 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M4 8V6a6 6 0 1 1 12 0h-3v2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z"
+                />
+              </svg>
+            </span>
+            <input
+              class="w-full h-12 focus:outline-none"
+              type="password"
+              name="password"
+              placeholder="Password"
+              v-model.trim="password"
+            />
+          </div>
+          <the-button
+            class="bg-indigo-600 inline-block mx-auto text-white text-sm uppercase rounded shadow-md px-6 py-2"
+            >{{ submitButton }}</the-button
+          >
+          <the-button
+            type="button"
+            mode="flat"
+            @click="switchAuthMode"
+            class="bg-indigo-600 inline-block mx-auto text-white text-sm uppercase rounded shadow-md px-6 py-2"
+            >{{ switchModeButtonCaption }}</the-button
+          >
+        </form>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
       formIsValid: true,
-      mode: 'login',
-    }
+      mode: "login",
+    };
   },
   computed: {
     submitButton() {
-      if (this.mode === 'login') {
-        return 'Login'
+      if (this.mode === "login") {
+        return "Login";
       } else {
-        return 'Signup'
+        return "Signup";
       }
     },
     switchModeButtonCaption() {
-      if (this.mode === 'login') {
-        return 'Signup instead'
+      if (this.mode === "login") {
+        return "Signup instead";
       } else {
-        return 'Login'
+        return "Login";
       }
     },
   },
   methods: {
     submitForm() {
-      this.formIsValid = true
+      this.formIsValid = true;
       if (
-        this.email === '' ||
-        !this.email.includes('@') ||
+        this.email === "" ||
+        !this.email.includes("@") ||
         this.password.length < 6
       ) {
-        this.formIsValid = false
-        return
+        this.formIsValid = false;
+        return;
       }
 
-      if (this.mode === 'login') {
-        this.$store.dispatch('login', {
+      if (this.mode === "login") {
+        this.$store.dispatch("login", {
           email: this.email,
           password: this.password,
-        })
+        });
       } else {
-        this.$store.dispatch('signup', {
+        this.$store.dispatch("signup", {
           email: this.email,
           password: this.password,
-        })
+        });
       }
     },
     switchAuthMode() {
-      if (this.mode === 'login') {
-        this.mode = 'signup'
+      if (this.mode === "login") {
+        this.mode = "signup";
       } else {
-        this.mode = 'login'
+        this.mode = "login";
       }
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

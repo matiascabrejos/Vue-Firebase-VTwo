@@ -6,7 +6,7 @@
   </button>          
   <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
   <div class="border-b mb-5 flex justify-between text-sm">
-    <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+    <div class="text-blue-500 flex items-center pb-2 pr-2 border-b-2 border-blue-500 uppercase">
      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
 </svg>
