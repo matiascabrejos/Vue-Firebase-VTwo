@@ -1,6 +1,11 @@
 <template>
  <the-navbar></the-navbar>
- <router-view></router-view>
+   <router-view v-slot="slotProps"
+  >
+    <transition name="route" mode="out-in">
+      <component :is="slotProps.Component"></component>
+    </transition>
+  </router-view>
 </template>
 
 <script>
@@ -27,4 +32,5 @@ export default {
 .route-leave-from {
   opacity: 1;
 }
+
 </style>
