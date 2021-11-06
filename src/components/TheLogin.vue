@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-md mx-auto bg-white shadow-xl rounded my-8">
-    <div class="bg-gray-200 pt-8 pb-16">
-      <div class="text-center text-gray-600 mb-6">
+    <div class="bg-blue-100 pt-8 pb-16">
+      <div class="text-center text-blue-500 mb-6 font-bold">
         Login or Sign Up
       </div>
       <div class="w-4/5 mx-auto">
@@ -46,17 +46,19 @@
               v-model.trim="password"
             />
           </div>
-          <the-button
-            class="bg-indigo-600 inline-block mx-auto text-white text-sm uppercase rounded shadow-md px-6 py-2"
-            >{{ submitButton }}</the-button
-          >
-          <the-button
-            type="button"
-            mode="flat"
-            @click="switchAuthMode"
-            class="bg-indigo-600 inline-block mx-auto text-white text-sm uppercase rounded shadow-md px-6 py-2"
-            >{{ switchModeButtonCaption }}</the-button
-          >
+          <div class="flex justify-center items-center">
+            <the-button
+              class="bg-blue-500 border hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2 mr-4"
+              >{{ submitButton }}</the-button
+            >
+            <the-button
+              type="button"
+              mode="flat"
+              @click="switchAuthMode"
+              class="bg-blue-500 border hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2"
+              >{{ switchModeButtonCaption }}</the-button
+            >
+          </div>
         </form>
       </div>
     </div>
