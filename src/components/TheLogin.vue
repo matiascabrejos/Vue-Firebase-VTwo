@@ -103,16 +103,23 @@ export default {
         return;
       }
 
-      if (this.mode === "login") {
-        this.$store.dispatch("login", {
-          email: this.email,
-          password: this.password,
-        });
-      } else {
-        this.$store.dispatch("signup", {
-          email: this.email,
-          password: this.password,
-        });
+      this.$router.replace("/");
+
+      try {
+        if (this.mode === "login") {
+          this.$store.dispatch("login", {
+            email: this.email,
+            password: this.password,
+          });
+        } else {
+          this.$store.dispatch("signup", {
+            email: this.email,
+            password: this.password,
+          });
+        }
+        this.$router.replace("/");
+      } catch (err) {
+        this.error = err.message || "Failed to authenticate, try later.";
       }
     },
     switchAuthMode() {
