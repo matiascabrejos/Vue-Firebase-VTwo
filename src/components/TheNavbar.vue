@@ -59,6 +59,11 @@
           >
             NEW NOTE
           </router-link>
+          <router-link
+            to=""
+            class="no-underline block mt-4 sm:inline-block sm:mt-0 text-white  hover:text-blue-500 mr-4 font-bold"
+            >NOTES</router-link
+          >
         </div>
         <div v-if="isLoggedIn">
           <button

@@ -102,9 +102,7 @@ export default {
         this.formIsValid = false;
         return;
       }
-
-      this.$router.replace("/");
-
+      
       try {
         if (this.mode === "login") {
           this.$store.dispatch("login", {
