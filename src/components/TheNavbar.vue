@@ -19,7 +19,7 @@
             clip-rule="evenodd"
           />
         </svg>
-        <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
+        <span class="font-semibold text-xl tracking-tight">iNOTES APP</span>
       </div>
       <div class="block sm:hidden">
         <button

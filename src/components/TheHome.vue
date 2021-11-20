@@ -76,7 +76,7 @@ export default {
   },
   computed: {
     filteredNotes() {
-      return this.$store.getters["notes/notes"];
+      return this.$store.getters["notes/notes"].slice(0, 3);
     },
   },
   created() {
