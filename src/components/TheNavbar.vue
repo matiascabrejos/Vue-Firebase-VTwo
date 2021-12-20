@@ -48,11 +48,10 @@
             HOME
           </router-link>
           <router-link
-            to="/login"
-            class="no-underline block mt-4 sm:inline-block sm:mt-0 text-white hover:text-blue-500 mr-4 font-bold"
+            to="/notes"
+            class="no-underline block mt-4 sm:inline-block sm:mt-0 text-white  hover:text-blue-500 mr-4 font-bold"
+            >NOTES</router-link
           >
-            LOGIN
-          </router-link>
           <router-link
             to="/add-note"
             class="no-underline block mt-4 sm:inline-block sm:mt-0 text-white  hover:text-blue-500 mr-4 font-bold"
@@ -60,10 +59,11 @@
             NEW NOTE
           </router-link>
           <router-link
-            to="/notes"
-            class="no-underline block mt-4 sm:inline-block sm:mt-0 text-white  hover:text-blue-500 mr-4 font-bold"
-            >NOTES</router-link
+            to="/login"
+            class="no-underline block mt-4 sm:inline-block sm:mt-0 text-white hover:text-blue-500 mr-4 font-bold"
           >
+            LOGIN
+          </router-link>
         </div>
         <div v-if="isLoggedIn">
           <button
@@ -107,4 +107,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+a.active {
+  --tw-bg-opacity: 1;
+  color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+</style>

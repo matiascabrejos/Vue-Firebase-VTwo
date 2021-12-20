@@ -6,6 +6,7 @@
       <component :is="slotProps.Component"></component>
     </transition>
   </router-view>
+  <the-footer></the-footer>
 </template>
 
 <script>

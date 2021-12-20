@@ -11,6 +11,7 @@ import AddNote from "./components/AddNote.vue";
 import TheHome from "./components/TheHome.vue";
 import TheNavbar from "./components/TheNavbar.vue";
 import TheNotes from "./components/TheNotes.vue";
+import TheFooter from "./components/TheFooter.vue";
 
 const app = createApp(App);
 
@@ -33,6 +34,7 @@ app.component("add-note", AddNote);
 app.component("the-home", TheHome);
 app.component("the-navbar", TheNavbar);
 app.component("the-notes", TheNotes);
+app.component("the-footer", TheFooter);
 
 app.use(router);
 app.use(store);
