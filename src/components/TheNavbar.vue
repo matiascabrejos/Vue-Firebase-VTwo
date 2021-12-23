@@ -76,11 +76,6 @@
       </div>
     </nav>
   </div>
-
-  <div v-if="isLoggedIn">
-    <button @click="logout">LOGOUT</button>
-  </div>
-  <router-link to=""></router-link>
 </template>
 
 <script>

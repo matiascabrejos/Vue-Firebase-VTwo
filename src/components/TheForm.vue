@@ -14,7 +14,7 @@
         <input
           type="text"
           v-model.trim="title"
-          class="w-full p-2 mb-6 text-blue-700 border-b-2 border-blue-500 outline-none focus:bg-gray-300"
+          class="w-full p-2 mb-6 text-gray-800 border-b-2 border-blue-500 outline-none focus:bg-gray-200"
         />
         <label for="" class="block mb-2 text-blue-500 font-bold"
           >Description</label
@@ -25,7 +25,7 @@
           cols="30"
           rows="8"
           v-model.trim="description"
-          class="w-full p-2 mb-6 text-blue-700 border-b-2 border-blue-500 outline-none focus:bg-gray-300"
+          class="w-full p-2 mb-6 text-gray-800 border-b-2 border-blue-500 outline-none focus:bg-gray-200"
         ></textarea>
         <label for="" class="block mb-2 text-blue-500 font-bold"
           >Image Link</label
@@ -33,7 +33,7 @@
         <input
           type="text"
           v-model.trim="imageLink"
-          class="w-full p-2 mb-6 text-blue-700 border-b-2 border-blue-500 outline-none focus:bg-gray-300"
+          class="w-full p-2 mb-6 text-gray-800 border-b-2 border-blue-500 outline-none focus:bg-gray-200"
         />
         <div>
           <h3>Level Of Importance</h3>

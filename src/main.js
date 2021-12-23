@@ -12,6 +12,7 @@ import TheHome from "./components/TheHome.vue";
 import TheNavbar from "./components/TheNavbar.vue";
 import TheNotes from "./components/TheNotes.vue";
 import TheFooter from "./components/TheFooter.vue";
+import SucccessAlert from "./components/SuccessAlert.vue";
 
 const app = createApp(App);
 
@@ -23,6 +24,7 @@ const router = createRouter({
     { path: "/add-note", component: AddNote },
     { path: "/login", component: TheLogin },
     { path: "/notes", component: TheNotes },
+    { path: "/success", component: SucccessAlert },
   ],
   linkActiveClass: "active",
 });
