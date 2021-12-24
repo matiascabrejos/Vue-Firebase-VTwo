@@ -1,7 +1,6 @@
 <template>
- <the-navbar></the-navbar>
-   <router-view v-slot="slotProps"
-  >
+  <the-navbar></the-navbar>
+  <router-view v-slot="slotProps">
     <transition name="route" mode="out-in">
       <component :is="slotProps.Component"></component>
     </transition>
@@ -10,10 +9,11 @@
 </template>
 
 <script>
-
 export default {
-
-}
+  created() {
+    this.$store.dispatch("tryLogin");
+  },
+};
 </script>
 
 <style>
@@ -33,5 +33,4 @@ export default {
 .route-leave-from {
   opacity: 1;
 }
-
 </style>

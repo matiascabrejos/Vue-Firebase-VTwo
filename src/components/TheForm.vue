@@ -1,6 +1,16 @@
 <template>
   <div class="py-5">
     <div
+      v-if="!isLoggedIn"
+      class="font-semibold pl-1 text-blue-500 text-center mx-auto pb-4 px-4 text-lg"
+    >
+      <p>
+        If you see this message it is because you are not logged in. To write a
+        note you have to be logged in.
+      </p>
+      <router-link to="/login" class=" hover:underline">Click here to Login or Sign Up</router-link>
+    </div>
+    <div
       class="w-full max-w-md m-auto bg-blue-100 p-5 shadow-lg rounded-lg overflow-hidden"
     >
       <header>
@@ -100,6 +110,11 @@ export default {
         imageLink: this.imageLink,
       };
       this.$emit("save-data", formData);
+    },
+  },
+  computed: {
+    isLoggedIn() {
+      return this.$store.getters.isAuthenticated;
     },
   },
 };

@@ -105,19 +105,28 @@ export default {
 
       try {
         if (this.mode === "login") {
-          this.$store.dispatch("login", {
-            email: this.email,
-            password: this.password,
-          });
+          this.$store
+            .dispatch("login", {
+              email: this.email,
+              password: this.password,
+            })
+            .then(() => {
+              alert("You are now logged in!");
+              this.$router.push("/");
+            });
         } else {
-          this.$store.dispatch("signup", {
-            email: this.email,
-            password: this.password,
-          });
+          this.$store
+            .dispatch("signup", {
+              email: this.email,
+              password: this.password,
+            })
+            .then(() => {
+              alert("Successfully signed up!");
+              this.$router.push("/");
+            });
         }
-        this.$router.replace("/");
       } catch (err) {
-        this.error = err.message || "Failed to authenticate, try later.";
+        this.error = alert(err.message) || "Failed to authenticate, try later.";
       }
     },
     switchAuthMode() {
