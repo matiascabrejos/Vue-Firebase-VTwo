@@ -47,7 +47,7 @@
             />
           </div>
           <div class="flex justify-center items-center">
-            <the-button
+            <!-- <the-button
               class="bg-blue-500 border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2 mr-4"
               >{{ submitButton }}</the-button
             >
@@ -57,7 +57,19 @@
               @click="switchAuthMode"
               class="bg-blue-500 border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2"
               >{{ switchModeButtonCaption }}</the-button
+            > -->
+            <button
+              @click="login"
+              class="bg-blue-500 border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2 mr-4"
             >
+              Login
+            </button>
+            <button
+              @click="signUp"
+              class="bg-blue-500 border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2"
+            >
+              Sign Up
+            </button>
           </div>
         </form>
       </div>
@@ -102,32 +114,6 @@ export default {
         this.formIsValid = false;
         return;
       }
-
-      try {
-        if (this.mode === "login") {
-          this.$store
-            .dispatch("login", {
-              email: this.email,
-              password: this.password,
-            })
-            .then(() => {
-              alert("You are now logged in!");
-              this.$router.push("/");
-            });
-        } else {
-          this.$store
-            .dispatch("signup", {
-              email: this.email,
-              password: this.password,
-            })
-            .then(() => {
-              alert("Successfully signed up!");
-              this.$router.push("/");
-            });
-        }
-      } catch (err) {
-        this.error = alert(err.message) || "Failed to authenticate, try later.";
-      }
     },
     switchAuthMode() {
       if (this.mode === "login") {
@@ -135,6 +121,28 @@ export default {
       } else {
         this.mode = "login";
       }
+    },
+    login() {
+      this.$store
+        .dispatch("login", {
+          email: this.email,
+          password: this.password,
+        })
+        .then(() => {
+          alert("You are now logged in!");
+          this.$router.push("/");
+        });
+    },
+    signUp() {
+      this.$store
+        .dispatch("signup", {
+          email: this.email,
+          password: this.password,
+        })
+        .then(() => {
+          alert("Successfully signed up!");
+          this.$router.push("/");
+        });
     },
   },
 };

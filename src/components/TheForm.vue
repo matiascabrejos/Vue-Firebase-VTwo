@@ -8,7 +8,9 @@
         If you see this message it is because you are not logged in. To write a
         note you have to be logged in.
       </p>
-      <router-link to="/login" class=" hover:underline">Click here to Login or Sign Up</router-link>
+      <router-link to="/login" class=" hover:underline"
+        >Click here to Login or Sign Up</router-link
+      >
     </div>
     <div
       class="w-full max-w-md m-auto bg-blue-100 p-5 shadow-lg rounded-lg overflow-hidden"
@@ -110,6 +112,7 @@ export default {
         imageLink: this.imageLink,
       };
       this.$emit("save-data", formData);
+      this.$router.push("/notes");
     },
   },
   computed: {
