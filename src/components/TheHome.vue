@@ -1,15 +1,6 @@
 <template>
   <div>
     <div>
-      <lottie-player
-        src="https://assets8.lottiefiles.com/packages/lf20_LQu2Ly.json"
-        background="transparent"
-        speed="1"
-        style="width: 400px; height: 400px;"
-        loop
-        autoplay
-        class="mx-auto"
-      ></lottie-player>
       <button
         @click="$router.push('/add-note')"
         class="mx-auto no-underline block text-xl px-4 py-2 leading-none border rounded bg-blue-500 text-white hover:border-blue-500 hover:text-blue-500 hover:bg-white mt-4 sm:mt-0"
@@ -17,7 +8,7 @@
         Add A Note!
       </button>
       <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
-        <div class="border-b mb-5 flex justify-between text-sm">
+        <div class="mb-5 flex justify-between text-sm">
           <div
             class="text-blue-500 flex items-center pb-2 pr-2 border-b-2 border-blue-500 uppercase"
           >

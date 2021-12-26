@@ -1,5 +1,5 @@
 <template>
-  <div class="py-5">
+  <div class="py-5 m-2">
     <div
       v-if="!isLoggedIn"
       class="font-semibold pl-1 text-blue-500 text-center mx-auto pb-4 px-4 text-lg"
