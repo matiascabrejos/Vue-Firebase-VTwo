@@ -46,6 +46,9 @@
               v-model.trim="password"
             />
           </div>
+          <p v-if="!formIsValid" class="text-red-600">
+            Remember! Password must be at least 6 characters long.
+          </p>
           <div class="flex justify-center items-center">
             <!-- <the-button
               class="bg-blue-500 border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2 mr-4"
