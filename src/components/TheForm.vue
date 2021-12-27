@@ -1,5 +1,5 @@
 <template>
-  <div class="py-5 m-2">
+  <div class="py-5 m-4 lg:h-screen md:h-screen">
     <div
       v-if="!isLoggedIn"
       class="font-semibold pl-1 text-blue-500 text-center mx-auto pb-4 px-4 text-lg"
@@ -47,41 +47,6 @@
           v-model.trim="imageLink"
           class="w-full p-2 mb-6 text-gray-800 border-b-2 border-blue-500 outline-none focus:bg-gray-200"
         />
-        <div>
-          <h3>Level Of Importance</h3>
-        </div>
-        <div class="flex">
-          <input
-            type="checkbox"
-            id="vimportant"
-            value="vimportant"
-            v-model="levelImportance"
-            class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
-          />
-          <label for="vimportant" class="block mb-2 text-indigo-500"
-            >Very Important</label
-          >
-          <input
-            type="checkbox"
-            id="important"
-            value="important"
-            v-model="levelImportance"
-            class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
-          />
-          <label for="important" class="block mb-2 text-indigo-500"
-            >Important</label
-          >
-          <input
-            type="checkbox"
-            id="ntimportant"
-            value="ntimportant"
-            v-model="levelImportance"
-            class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"
-          />
-          <label for="ntimportant" class="block mb-2 text-indigo-500"
-            >Not That Important</label
-          >
-        </div>
         <button
           class="w-full border bg-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 text-white font-bold py-2 px-4 mb-6 rounded"
         >
@@ -112,6 +77,7 @@ export default {
         imageLink: this.imageLink,
       };
       this.$emit("save-data", formData);
+      alert("Note added successfully!");
       this.$router.push("/notes");
     },
   },

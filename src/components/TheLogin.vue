@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="lg:h-screen md:h-screen mb-28 lg:mb-0 md:mb-0">
     <div
       class="max-w-md mx-auto bg-white shadow-none lg:shadow-xl md:shadow-xl rounded my-14"
     >

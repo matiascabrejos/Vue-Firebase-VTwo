@@ -1,12 +1,14 @@
 <template>
-  <div>
+  <div class="lg:h-screen md:h-screen">
     <div>
-      <button
-        @click="$router.push('/add-note')"
-        class="mx-auto no-underline block text-xl px-4 py-2 leading-none border rounded bg-blue-500 text-white hover:border-blue-500 hover:text-blue-500 hover:bg-white mt-4 sm:mt-0"
-      >
-        Add A Note!
-      </button>
+      <div class="mt-10">
+        <button
+          @click="$router.push('/add-note')"
+          class="mx-auto no-underline block text-xl px-4 py-2 leading-none border rounded bg-blue-500 text-white hover:border-blue-500 hover:text-blue-500 hover:bg-white mt-4 sm:mt-0"
+        >
+          Add A Note!
+        </button>
+      </div>
       <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative">
         <div class="mb-5 flex justify-between text-sm">
           <div
@@ -36,7 +38,7 @@
             :key="note.id"
           >
             <p
-              class="text-gray-900 font-medium hover:text-indigo-600 pl-2 pt-3"
+              class="text-gray-900 font-medium hover:text-blue-500 pl-2 pt-3"
             >
               {{ note.title }}
             </p>
@@ -44,16 +46,13 @@
               <div class="text-sm w-2/3">
                 <p class="text-gray-700 pl-2">{{ note.description }}</p>
               </div>
-              <div class="w-20 h-20 bg-cover bg-center pr-3">
+              <div class="w-16 h-16 lg:w-20 lg:h-20 bg-cover bg-center pr-3">
                 <img :src="note.imageLink" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <h1>Notes</h1>
-      <button @click="loadNotes">Refresh</button>
     </div>
   </div>
 </template>
