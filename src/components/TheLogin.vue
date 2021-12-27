@@ -49,7 +49,7 @@
                 v-model.trim="password"
               />
             </div>
-            <p v-if="!formIsValid" class="text-red-600">
+            <p v-if="!formIsValid" class="text-red-600 mb-2">
               Remember! Password must be at least 6 characters long.
             </p>
             <div class="flex justify-center items-center">

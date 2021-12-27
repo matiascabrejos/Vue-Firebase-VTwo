@@ -34,7 +34,7 @@
           <div class="text-sm w-2/3">
             <p class="text-gray-700 pl-2">{{ note.description }}</p>
           </div>
-          <div class="w-16 h-16 lg:w-20 lg:h-20 bg-cover bg-center pr-3">
+          <div class="w-16 h-16 lg:w-20 lg:h-20 md:w-20 md:h-20 bg-cover bg-center pr-3">
             <img :src="note.imageLink" alt="" />
           </div>
         </div>
