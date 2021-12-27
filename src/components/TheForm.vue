@@ -1,5 +1,5 @@
 <template>
-  <div class="py-5 m-4 lg:h-screen md:h-screen">
+  <div class="py-5 m-4 screen-height">
     <div
       v-if="!isLoggedIn"
       class="font-semibold pl-1 text-blue-500 text-center mx-auto pb-4 px-4 text-lg"
@@ -88,3 +88,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.screen-height {
+  min-height: 80vh;
+}
+</style>

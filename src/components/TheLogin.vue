@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:h-screen md:h-screen mb-28 lg:mb-0 md:mb-0">
+  <div class="screen-height">
     <div
       class="max-w-md mx-auto bg-white shadow-none lg:shadow-xl md:shadow-xl rounded my-14"
     >
@@ -53,17 +53,6 @@
               Remember! Password must be at least 6 characters long.
             </p>
             <div class="flex justify-center items-center">
-              <!-- <the-button
-              class="bg-blue-500 border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2 mr-4"
-              >{{ submitButton }}</the-button
-            >
-            <the-button
-              type="button"
-              mode="flat"
-              @click="switchAuthMode"
-              class="bg-blue-500 border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2"
-              >{{ switchModeButtonCaption }}</the-button
-            > -->
               <button
                 @click="login"
                 class="bg-blue-500 border border-blue-500 hover:bg-white hover:text-blue-500 hover:border-blue-500 inline-block text-white text-base uppercase rounded shadow-md px-6 py-2 mr-4"
@@ -155,41 +144,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.card {
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  padding: 1rem;
-  margin: 2rem auto;
-  max-width: 40rem;
-  .form-control {
-    margin: 0.5rem 0;
-    label {
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-    input,
-    textarea {
-      display: block;
-      width: 100%;
-      font: inherit;
-      border: 1px solid #ccc;
-      padding: 0.15rem;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: #3d008d;
-      background-color: #faf6ff;
-      outline: none;
-    }
-    form {
-      margin: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      padding: 1rem;
-    }
-  }
+<style scoped>
+.screen-height {
+  min-height: 80vh;
 }
 </style>

@@ -13,6 +13,7 @@ import TheNavbar from "./components/TheNavbar.vue";
 import TheNotes from "./components/TheNotes.vue";
 import TheFooter from "./components/TheFooter.vue";
 import SucccessAlert from "./components/SuccessAlert.vue";
+import NotFound from "./components/NotFound.vue";
 
 const app = createApp(App);
 
@@ -25,6 +26,7 @@ const router = createRouter({
     { path: "/login", component: TheLogin },
     { path: "/notes", component: TheNotes },
     { path: "/success", component: SucccessAlert },
+    { path: "/:notFound(.*)", component: NotFound },
   ],
   linkActiveClass: "active",
 });

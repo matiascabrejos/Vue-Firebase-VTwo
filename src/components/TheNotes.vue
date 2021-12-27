@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:h-screen md:h-screen">
+  <div class="screen-height">
     <div class="mb-5 flex justify-between pt-6 pb-8">
       <div
         class="text-blue-500 flex items-center pb-2 pr-2 border-b-2 border-blue-500 uppercase mx-auto"
@@ -60,3 +60,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.screen-height {
+  min-height: 80vh;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:h-screen md:h-screen">
+  <div class="screen-height">
     <div>
       <div class="mt-10">
         <button
@@ -37,16 +37,16 @@
             v-for="note in filteredNotes"
             :key="note.id"
           >
-            <p
-              class="text-gray-900 font-medium hover:text-blue-500 pl-2 pt-3"
-            >
+            <p class="text-gray-900 font-medium hover:text-blue-500 pl-2 pt-3">
               {{ note.title }}
             </p>
             <div class="flex items-start justify-between mt-3">
               <div class="text-sm w-2/3">
                 <p class="text-gray-700 pl-2">{{ note.description }}</p>
               </div>
-              <div class="w-16 h-16 lg:w-20 lg:h-20 md:w-20 md:h-20 bg-cover bg-center pr-3">
+              <div
+                class="w-16 h-16 lg:w-20 lg:h-20 md:w-20 md:h-20 bg-cover bg-center pr-3"
+              >
                 <img :src="note.imageLink" alt="" />
               </div>
             </div>
@@ -75,4 +75,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.screen-height {
+  min-height: 80vh;
+}
+</style>
