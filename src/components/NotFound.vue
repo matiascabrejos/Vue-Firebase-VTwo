@@ -1,7 +1,7 @@
 <template>
   <div class="pt-20 text-center min-h-screen bg-gray-200">
     <div class="flex justify-center">
-      <div class="card text-gray-600">
+      <div class="card text-gray-600 bg-white">
         <h1 class="font-bold">Page not found</h1>
         <h2 class="font-semibold">
           This page could not be found - Check out our
