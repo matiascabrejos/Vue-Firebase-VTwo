@@ -1,9 +1,9 @@
 <template>
-  <div class="screen-height">
+  <div class="screen-height bg-gray-200">
     <div
-      class="max-w-md mx-auto bg-white shadow-none lg:shadow-xl md:shadow-xl rounded my-14"
+      class="max-w-md mx-auto py-14"
     >
-      <div class="bg-blue-100 pt-8 pb-16 m-2 lg:m-0 md:m-0">
+      <div class="bg-blue-100 pt-8 pb-16 m-2 lg:m-0 md:m-0 lg:shadow-xl md:shadow-xl rounded">
         <div class="text-center text-blue-500 mb-6 font-bold">
           Login or Sign Up
         </div>

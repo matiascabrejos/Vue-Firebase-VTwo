@@ -1,23 +1,23 @@
 <template>
-  <div class="screen-height">
-      <div class="text-center shadow-lg rounded-lg inline-block p-4">
-        <div class="text-gray-900">
-          <h1 class="font-bold">Page not found</h1>
-          <h2 class="font-semibold">
-            This page could not be found - Check out our
-            <router-link to="/home" class="text-blue-500">Homepage</router-link>
-          </h2>
-        </div>
+  <div class="pt-20 text-center min-h-screen bg-gray-200">
+    <div class="flex justify-center">
+      <div class="card text-gray-600">
+        <h1 class="font-bold">Page not found</h1>
+        <h2 class="font-semibold">
+          This page could not be found - Check out our
+          <router-link to="/" class="hover:text-blue-500">Homepage</router-link>
+        </h2>
       </div>
+    </div>
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style scoped>
-.screen-height {
-  min-height: 80vh;
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 2rem;
+  margin: 2rem 1rem;
+  max-width: 40rem;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div class="screen-height">
+  <div class="screen-height bg-gray-200">
     <div>
-      <div class="mt-10">
+      <div class="pt-10">
         <button
           @click="$router.push('/add-note')"
           class="mx-auto no-underline block text-xl px-4 py-2 leading-none border rounded bg-blue-500 text-white hover:border-blue-500 hover:text-blue-500 hover:bg-white mt-4 sm:mt-0"
