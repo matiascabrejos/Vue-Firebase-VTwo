@@ -76,9 +76,14 @@ export default {
         levelImportance: this.levelImportance,
         imageLink: this.imageLink,
       };
-      this.$emit("save-data", formData);
-      alert("Note added successfully!");
-      this.$router.push("/notes");
+      if (this.isLoggedIn) {
+        this.$emit("save-data", formData);
+        alert("Note added successfully!");
+        this.$router.push("/notes");
+      }
+      else {
+        alert('You are not logged in! In order to create a note, please logged in.')
+      }
     },
   },
   computed: {

@@ -10,10 +10,10 @@ export default {
 
         const token = context.rootGetters.token
 
-        const response = await fetch(`https://fir-login-e87c1-default-rtdb.firebaseio.com/notes.json?auth=` + token, {
-            method: 'POST',
-            body: JSON.stringify(noteData)
-        })
+        const response = await fetch(process.env.VUE_APP_BASE_REGISTERNOTE_URL + token, {
+          method: "POST",
+          body: JSON.stringify(noteData),
+        });
 
         // const responseData = await response.json()
         
@@ -29,7 +29,7 @@ export default {
         })
     },
     async loadNotes(context) {
-        const response = await fetch(`https://fir-login-e87c1-default-rtdb.firebaseio.com/notes.json`)
+        const response = await fetch(process.env.VUE_APP_BASE_LOADNOTES_URL)
 
         const responseData = await response.json()
 
